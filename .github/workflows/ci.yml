@@ -25,4 +25,4 @@ jobs:
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-      - run: deno test --allow-all test/*.test.ts
+      - run: deno test --allow-all test/

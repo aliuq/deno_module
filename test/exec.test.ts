@@ -11,7 +11,7 @@ Deno.test('Function - execr', async () => {
 })
 
 Deno.test('Function - exec and execr', async () => {
-  await exec('echo hello execr > 1.txt')
+  await exec('echo "hello execr" > 1.txt')
   assertExists(await Deno.stat('1.txt'))
   const content = await execr('cat 1.txt')
   assertEquals(content, 'hello execr')

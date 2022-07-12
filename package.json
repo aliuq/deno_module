@@ -1,6 +1,6 @@
 {
   "name": "aliuq",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1",
   "private": true,
   "description": "Own deno common tools",
   "main": "dist/index.cjs",

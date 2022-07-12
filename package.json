@@ -1,0 +1,30 @@
+{
+  "name": "aliuq",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Own deno common tools",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin",
+    "*.d.ts"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "unbuild",
+    "lint": "eslint src",
+    "prerelease": "pnpm run lint",
+    "release": "bumpp --push --tag --commit"
+  },
+  "devDependencies": {
+    "@aliuq/eslint-config": "^0.0.3",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.15.0",
+    "tsup": "^5.12.7",
+    "typescript": "^4.6.4",
+    "unbuild": "^0.7.4"
+  }
+}

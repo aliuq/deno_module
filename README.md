@@ -1,2 +1,3 @@
-# deno_module
+# aliuq
+
 Own deno common tools

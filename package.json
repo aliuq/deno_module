@@ -13,7 +13,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "test": "deno test test/*.test.ts",
+    "test": "deno test --allow-all test/*.test.ts",
     "lint": "eslint --ext .js,.mjs,.ts,.json .",
     "prerelease": "pnpm run lint && pnpm run test",
     "release": "bumpp --push --tag --commit"

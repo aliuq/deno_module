@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "tsup --watch src",
     "build": "unbuild",
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.mjs,.ts,.json .",
     "prerelease": "pnpm run lint",
     "release": "bumpp --push --tag --commit"
   },

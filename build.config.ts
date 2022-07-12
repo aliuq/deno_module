@@ -9,6 +9,6 @@ export default defineBuildConfig({
   declaration: true,
   externals: [],
   rollup: {
-    emitCJS: true,
+    emitCJS: false,
   },
 })

@@ -1,3 +1,3 @@
-declare function hello(msg: string): void;
+declare function hello(msg: string): void
 
-export { hello };
+export { hello }

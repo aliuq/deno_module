@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'src/**/*'
+      - 'lib/**/*'
       - 'test/**/*.test.ts'
   pull_request:
     branches:

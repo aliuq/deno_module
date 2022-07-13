@@ -66,7 +66,7 @@ export async function wrapPrompt(option: WrapPromptOptions | string): Promise<st
   _count += 1
 
   if (_count > count) {
-    Deno.stdout.write(new TextEncoder().encode(`${red(`${message}`)}`))
+    Deno.stdout.write(new TextEncoder().encode(`${red('Too many prompts, exiting...')}`))
     Deno.exit(1)
   }
   const input = prompt(message, defaultValue)

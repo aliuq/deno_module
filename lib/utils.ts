@@ -1,7 +1,7 @@
 // Copyright 2018-2022 the Deno authors. All rights reserved. MIT license.
 // Some utility functions for Deno.
 
-import { red, yellow } from 'https://deno.land/std@0.147.0/fmt/colors.ts'
+import { red, yellow } from 'fmt/colors.ts'
 
 /**
  * Some functions
@@ -49,7 +49,7 @@ interface WrapPromptOptions {
  * *Not tested*
  * @param option
  */
-export async function wrapPrompt(option: WrapPromptOptions | string): Promise<string> {
+export function wrapPrompt(option: WrapPromptOptions | string): string {
   if (typeof option === 'string') {
     option = {
       message: option,
@@ -66,7 +66,8 @@ export async function wrapPrompt(option: WrapPromptOptions | string): Promise<st
   _count += 1
 
   if (_count > count) {
-    Deno.stdout.write(new TextEncoder().encode(`${red('Too many prompts, exiting...')}`))
+    // eslint-disable-next-line no-console
+    console.log(`${red('Too many prompts, exiting...')}`)
     Deno.exit(1)
   }
   const input = prompt(message, defaultValue)
@@ -77,13 +78,14 @@ export async function wrapPrompt(option: WrapPromptOptions | string): Promise<st
   if (!input) {
     // eslint-disable-next-line no-console
     console.clear()
-    return await wrapPrompt({ ...option, message: newMessage, _count })
+    return wrapPrompt({ ...option, message: newMessage, _count })
   }
   else if (!values.includes(input?.toLowerCase())) {
     // eslint-disable-next-line no-console
     console.clear()
-    Deno.stdout.write(new TextEncoder().encode(`${yellow('Invalid input, please try again')}`))
-    return await wrapPrompt({ ...option, message: newMessage, _count })
+    // eslint-disable-next-line no-console
+    console.log(`${yellow('Invalid input, please try again')}`)
+    return wrapPrompt({ ...option, message: newMessage, _count })
   }
   return input
 }

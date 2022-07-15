@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "fmt/": "https://deno.land/std@0.148.0/fmt/",
+    "node/": "https://deno.land/std@0.148.0/node/",
+    "testing/": "https://deno.land/std@0.148.0/testing/"
+  }
+}

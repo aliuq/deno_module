@@ -1,4 +1,4 @@
-import { assertEquals, assertExists } from 'https://deno.land/std@0.147.0/testing/asserts.ts'
+import { assertEquals, assertExists } from 'testing/asserts.ts'
 import { exec, execr } from '../lib/exec.ts'
 
 Deno.test('Function - exec', async () => {

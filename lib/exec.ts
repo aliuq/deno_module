@@ -6,8 +6,8 @@
  *
  * @module
  */
-import { platform } from 'https://deno.land/std@0.147.0/node/os.ts'
-import { red } from 'https://deno.land/std@0.147.0/fmt/colors.ts'
+import { platform } from 'node/os.ts'
+import { red } from 'fmt/colors.ts'
 
 // deno-lint-ignore no-explicit-any
 const { Deno } = globalThis as any
